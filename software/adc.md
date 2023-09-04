@@ -14,12 +14,13 @@ number of bits. The RP2040 is equipped with a 12-bit ADC by default, but
 with MicroPython the ADC is internally converted to 16 bits.
 
 $$
-V_{digital} = V_{analog} \cdot \frac{V_{sys}}{Resolution ADC} = Value \cdot\frac{3.2V}{2^{16}}$$/label{eq1}
+V_{digital} = V_{analog} \cdot \frac{V_{sys}}{Resolution ADC} = Value \cdot\frac{3.2V}{2^{16}}
+\label{eq:adc1} $$
 
 To convert the digital values into analog quantities such as voltage or
 current, a conversion function is used. With a 16-bit conversion
 function, the input voltage is converted according to the equation
-([\[eq:adc\]](#eq:adc){reference-type="ref" reference="eq:adc"}), where
+\eqref{eq:adc1}, where
 $Value$ is the measured input value in volts.
 
 ```python
@@ -31,9 +32,7 @@ def getfilteredADC(self):
     self.filtered[3] = self.filter4.calc()
 ```
 
-
-The *getfilteredADC()* method in Listing
-[\[listing:3\]](#listing:3){reference-type="ref" reference="listing:3"}
+The *getfilteredADC()* method in the above Listing
 is a function in the *MPPTController* class that is used to sample the
 voltage and current data from the ADCs and smooth it through filtering.
 This involves filtering the raw data from the four ADC channels. The
