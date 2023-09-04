@@ -12,24 +12,25 @@ converts analog input signals into digital values. Usually the
 conversion is done with a certain accuracy, which is specified by the
 number of bits. The RP2040 is equipped with a 12-bit ADC by default, but
 with MicroPython the ADC is internally converted to 16 bits.
-$$\label{eq:adc}
-V_{digital} = V_{analog} \cdot \frac{V_{sys}}{Resolution ADC} = Value \cdot\frac{3.2V}{2^{16}}$$
+
+$$
+V_{digital} = V_{analog} \cdot \frac{V_{sys}}{Resolution ADC} = Value \cdot\frac{3.2V}{2^{16}}$$/label{eq1}
+
 To convert the digital values into analog quantities such as voltage or
 current, a conversion function is used. With a 16-bit conversion
 function, the input voltage is converted according to the equation
 ([\[eq:adc\]](#eq:adc){reference-type="ref" reference="eq:adc"}), where
 $Value$ is the measured input value in volts.
 
-::: listing
-``` {.python frame="lines" linenos="" xleftmargin="2em"}
-    def getfilteredADC(self):
-        '''Sample and filter adc data'''
-        self.filtered[0] = self.filter1.calc()
-        self.filtered[1] = self.filter2.calc()
-        self.filtered[2] = self.filter3.calc()
-        self.filtered[3] = self.filter4.calc()
+```python
+def getfilteredADC(self):
+    '''Sample and filter adc data'''
+    self.filtered[0] = self.filter1.calc()
+    self.filtered[1] = self.filter2.calc()
+    self.filtered[2] = self.filter3.calc()
+    self.filtered[3] = self.filter4.calc()
 ```
-:::
+
 
 The *getfilteredADC()* method in Listing
 [\[listing:3\]](#listing:3){reference-type="ref" reference="listing:3"}
@@ -43,8 +44,8 @@ channel to get the filtered data. This filtered data is then written to
 the filtered array of the MPPTController class, which is later used by
 the calcADCData() method to calculate the voltage values.
 
-::: listing
-``` {.python frame="lines" linenos="" xleftmargin="2em"}
+
+```python
 def calcADCData(self):
     '''Calcuate raw adc data to voltages and currents'''
     self.voltage[0] = round( corr[0] * self.filtered[0] * adcScaleFac
@@ -60,7 +61,7 @@ def calcADCData(self):
     self.power[0] = round(self.voltage[0] * self.current[0], 2)
     self.power[1] = round(self.voltage[1] * self.current[1], 2)
 ```
-:::
+
 
 The *calcADCData()* method from Listing
 [\[listing:3\]](#listing:3){reference-type="ref" reference="listing:3"}
