@@ -6,7 +6,7 @@ nav_order: 1
 
 # Solar Module Optimizer Mushroom MPPT
 
-![Hardware](assets/image/hardware2.png)
+![Hardware](../assets/image/hardware2.png)
 
 ## Implementation of a programmable solar module optimiser to investigate different MPPT algorithms in the presence of shading
 

@@ -29,4 +29,4 @@ The capacitor $C_{filter}$ is calculated according to
 reference="eq:lowpass"}) and assigned to a suitable value of the E24
 series with $C_{filter} = 220 nF$ [@scherzmonk p.665].
 
-![image](assets/image/tiefpass.svg)
+![image](../assets/image/tiefpass.svg)

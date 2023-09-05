@@ -83,4 +83,4 @@ circuits this is an important element. Because higher currents flow very
 quickly here and the power supply is more heavily loaded as a
 result [@IntelligentEnergy p.259] [@datasheet:SLUA618A].
 
-![image](assets/image/ir2104.svg)
+![image](../assets/image/ir2104.svg)
