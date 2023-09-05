@@ -20,7 +20,7 @@ of the solar module optimizer. For the experiments, an ohmic heating mat
 with a resistance of $R_{L}=24\Omega$ is connected to the output of the
 module optimizer.
 
-![image](assets/image/pv_emulator1.svg)
+![image](../assets/image/pv_emulator1.svg)
 
 In order to keep the experiments comparable and to always have the same
 laboratory conditions, no experimental trial with a
@@ -37,7 +37,7 @@ reference="fig:pvemu1"}. The number of diodes, the maximum current of
 the source and the resistor values can be varied to change the
 characteristic.
 
-![image](assets/image/pv_emulator2.svg)
+![image](../assets/image/pv_emulator2.svg)
 
 For this experimental setup, power devices designed for higher heat
 generation are used, such as the power diode *P600D* with a number of
@@ -59,4 +59,4 @@ module that is one-third shaded, with an open circuit voltage
 $V_{oc}=21V$, the short circuit current of $I_{sc}=5A$, and two bypass
 diodes.
 
-![image](assets/image/pvemulator.jpg)
+![image](../assets/image/pvemulator.jpg)
