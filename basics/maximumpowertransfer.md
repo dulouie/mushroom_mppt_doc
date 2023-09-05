@@ -16,7 +16,7 @@ properties of the cell and varies with sunlight intensity, temperature
 and other factors. When the load is optimally matched to the internal
 resistance of the cell, the solar cell can deliver its maximum power.
 
-![image](assets/image/konzept1.png)
+![image](../assets/image/konzept1.png)
 
 If a variable load resistor is connected to the solar cell, as shown in
 figure [\[fig:leistanpass\]](#fig:leistanpass), the dark red characteristic curve of the
