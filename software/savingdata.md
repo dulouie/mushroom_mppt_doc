@@ -13,8 +13,8 @@ initializes an SPI object with the correct parameters and uses the chip
 select pin (pin 1) to select the SD card. The initialization is done so
 that the microcontroller can write to and read from the SD card.
 
-::: listing
-``` {.python frame="lines" linenos="" xleftmargin="2em"}
+
+```python
 cs = machine.Pin(1, machine.Pin.OUT)
 spi = machine.SPI(0,
                   baudrate=1000000,
@@ -29,7 +29,6 @@ sd = sdcard.SDCard(spi, cs)
 vfs = uos.VfsFat(sd)
 uos.mount(vfs, "/sd")
 ```
-:::
 
 The actual writing of the data to the SD card is done in Listing
 [\[listing:8\]](#listing:8){reference-type="ref" reference="listing:8"},
@@ -43,8 +42,7 @@ is written to the file immediately and does not just remain in the
 buffer memory. The process continues indefinitely until the program is
 terminated.
 
-::: listing
-``` {.python frame="lines" linenos="" xleftmargin="2em"}
+```python
 file = open('/sd/iu-data.txt', 'w')
 file.write('duty' + ';' + 'voltage[0]' + ';' 
                         + 'current[0]' + ';' 
@@ -63,4 +61,3 @@ while(True):
                    '\n')
         file.flush()
 ```
-:::

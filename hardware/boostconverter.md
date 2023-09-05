@@ -18,12 +18,20 @@ voltage $U_{in}$ as well as the maximum output voltage $U_{out}$ are
 obtained from the specified characteristics. The maximum duty cycle
 $d_{max}$ is calculated according to equation
 [\[eq:dutymax\]](#eq:dutymax){reference-type="ref"
-reference="eq:dutymax"}. $$\label{eq:dutymax}
-d_{max} = 1 - \frac{V_{in}}{V_{out}} = 1 - \frac{15V}{50V} = 0.7$$ Then,
+reference="eq:dutymax"}.
+
+$$\label{eq:dutymax}
+d_{max} = 1 - \frac{V_{in}}{V_{out}} = 1 - \frac{15V}{50V} = 0.7$$
+
+Then,
 equation [\[eq:dutymin\]](#eq:dutymin){reference-type="ref"
 reference="eq:dutymin"} can be used to determine the minimum duty cycle.
+
+
 $$\label{eq:dutymin}
 d_{min} = 1 - \left(\frac{V_{in}}{V_{out}}\right) \cdot (1-d_{max}) = 1 - \left(\frac{30V}{15V}\right) \cdot (1-0,7) = 0,4$$
+
+
 In order to take into account the different input voltages $V_{in}$, the
 calculation of the inductance $L$ is performed with the minimum duty
 cycle $d_{min}$ and the maximum input voltage $V_{max}$. The size of the

@@ -7,9 +7,8 @@ parent: Maximum Power Point Tracking Algorithms
 
 # Observe & Perturb
 
-The [po]{acronym-label="po" acronym-form="singular+short"} method is the
-most commonly used algorithm for finding the [mpp]{acronym-label="mpp"
-acronym-form="singular+short"}, its operation is explained using the
+The PO-method is the
+most commonly used algorithm for finding the MPP, its operation is explained using the
 state diagram from Figure
 [\[fig:observeperturb\]](#fig:observeperturb){reference-type="ref"
 reference="fig:observeperturb"}. First of all, the voltage $V_{pv}$ and
@@ -21,10 +20,9 @@ the power delta is larger, the next step is to find out if the voltage
 delta has also changed, and the reference $V_{ref}$ can be increased or
 decreased by the step size $dV$ accordingly. The algorithm runs on the
 microcontroller in an infinite loop, continuously optimizing the
-performance of the solar panel.\
-\
-During implementation, it turns out that the [po]{acronym-label="po"
-acronym-form="singular+short"} algorithm does not work together with the
+performance of the solar panel.
+
+During implementation, it turns out that the PO-algorithm does not work together with the
 PI controller from chapter [6.4](#kap:pid){reference-type="ref"
 reference="kap:pid"}. When the maximum current flows out of the solar
 module, and then the duty cycle of the boost converter is further

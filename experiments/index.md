@@ -22,13 +22,12 @@ module optimizer.\
 \
 In order to keep the experiments comparable and to always have the same
 laboratory conditions, no experimental trial with a
-[pv]{acronym-label="pv" acronym-form="singular+short"}-module under
+PV-module under
 environmental conditions is performed, instead a PV emulator based on
 the principles of the paper *Simple and Fast Dynamic Photovoltaic
 Emulator based on a Physical Equivalent PV-cell Model* by Khawaldeh et
 al. is used [@pvemulator]. The emulator is based on the single-diode
-equivalent circuit of a [pv]{acronym-label="pv"
-acronym-form="singular+short"}-module, here a current source and a
+equivalent circuit of a PV-module, here a current source and a
 series connection of power diodes are connected together in the flux
 direction, and a series and a parallel resistor are also added, as shown
 in Figure [\[fig:pvemu1\]](#fig:pvemu1){reference-type="ref"
@@ -45,8 +44,7 @@ $N=30$ as well as a parallel resistance of $R_{p}=220 \Omega$ and a
 series resistance of $R_{s}= 0.4 \Omega$, and active air cooling is also
 required. 
 
-Another experiment is to record a [iu]{acronym-label="iu"
-acronym-form="singular+short"}-characteristic curve from a solar module
+Another experiment is to record a VI-characteristic curve from a solar module
 under partial shading, but for this the PV emulator must be wired
 slightly differently. The partial shading is emulated with an additional
 lower current source, which affects only a small part of the series

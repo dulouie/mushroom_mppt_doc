@@ -24,8 +24,7 @@ created in Listing [\[listing:1\]](#listing:1){reference-type="ref"
 reference="listing:1"} using object-oriented programming. These make it
 possible to define various methods and attributes [@micropython].
 
-::: listing
-``` {.python frame="lines" linenos="" xleftmargin="2em"}
+```python
 @singleton
 class MPPTController():
     ''' Hardware abtraction layer for MPPTController'''
@@ -49,27 +48,23 @@ class MPPTController():
         self.vRef = 0.
         self.pid = PID(scale='ms')
 ```
-:::
 
-\
 The *MPPTController* class is implemented as a singleton to ensure that
 only one instance of this class exists to access the hardware. The
 singleton design pattern avoids collisions and inconsistencies when
 accessing the hardware resource and improves structure and
 maintainability. In addition, implementation as a singleton provides the
 advantage of encapsulation between the peripheral and the algorithm that
-contains the logic for finding the [mpp]{acronym-label="mpp"
-acronym-form="singular+short"}. The *MPPTController* class provides a
+contains the logic for finding the MPP. The *MPPTController* class provides a
 hardware abstraction layer for the MPPT controller, and the *device*
 instance is later created from it. The attributes of this class provide
 access to various hardware components such as the
-[pwm]{acronym-label="pwm" acronym-form="singular+short"}, a shutdown
-option *SD*, and four [adc]{acronym-label="adc"
-acronym-form="singular+short"}, each of which is associated with a
+PWM, a shutdown
+option *SD*, and four ADC, each of which is associated with a
 filter to ensure a noise-free signal. In addition, the class has
 attributes for storing measured quantities such as voltage, current,
 power, and duty cycle. The voltage, current, and power are each stored
 for the input side and the output side respectively. In addition, a
-[pid]{acronym-label="pid" acronym-form="singular+short"} is initialized
+PID is initialized
 to regulate the output voltage to the setpoint *vRef* passed by the MPPT
 algorithm [@singleton].

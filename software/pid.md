@@ -7,7 +7,7 @@ parent: Software implementation
 
 # PID Controller {#kap:pid}
 
-A [pid]{acronym-label="pid" acronym-form="singular+short"} is a method
+A PID is a method
 that comes from control engineering, the controller continuously
 determines the deviation between the current value of a process to be
 controlled and a specified setpoint. On the basis of this deviation
@@ -25,8 +25,7 @@ controls the output voltage of the boost converter constantly to $25V$.
 The controller is additionally limited at its output to the minimum and
 maximum duty cycle $0\%$ to $70\%$ of the boost converter.
 
-::: listing
-``` {.python frame="lines" linenos="" xleftmargin="2em"}
+```python
 device.pid.tunings = (1.82, 60.45, 0)
 device.pid.output_limits = (0, 70)
 device.pid.setpoint = 25.
@@ -37,7 +36,6 @@ while(True):
     duty = device.pid(device.voltage[1])
     device.setDutyCycle(duty)
 ```
-:::
 
 The Ziegler-Nichols method of stability limit is a common method of
 adjusting PID controllers based on determining the critical gain and
@@ -46,7 +44,7 @@ process, the gain *$K_{P}$* is gradually increased until the system
 begins to oscillate. The period of these oscillations is measured with
 an oscilloscope, which determines the time constant of the boost
 controller, here a critical gain of $K_{u}=4.03$ and a time constant of
-$T_{u}=36mS$ is obtained. In this project, a PI controller is initially
+$T_{u}=36ms$ is obtained. In this project, a PI controller is initially
 chosen because the control deviation should be kept to a minimum and
 overshoot is undesirable. The parameters $K_{p}=1.82$ and $K_{i}=60.45$
 for the PI controller are calculated according to table
@@ -55,12 +53,8 @@ further optimization, an ordinary PID controller and a controller
 without overshoot are also listed
 here [@ziegler1942optimum; @simplepid].
 
-::: {#table:ziegler}
-       Type         $K_{p}$           $K_{i}$               $K_{d}$
-  -------------- ------------- ---------------------- --------------------
-        PI        $0.45K_{u}$   $0.54 K_{u} / T_{u}$           \-
-   classic PID    $0.60K_{u}$   $1.20K_{u} / T_{u}$    $0.075K_{u} T_{u}$
-   no overshoot   $0.20K_{u}$   $0.40K_{u} / T_{u}$    $0.066K_{u} T_{u}$
-
-  : Ziegler--Nichols methode parameter
-:::
+| Type         | $K_{p}$     | $K_{i}$              | $K_{d}$            |
+|--------------|-------------|----------------------|--------------------|
+| PI           | $0.45K_{u}$ | $0.54 K_{u} / T_{u}$ | -                  |
+| classic PID  | $0.60K_{u}$ | $1.20K_{u} / T_{u}$  | $0.075K_{u} T_{u}$ |
+| no overshoot | $0.20K_{u}$ | $0.40K_{u} / T_{u}$  | $0.066K_{u} T_{u}$ |

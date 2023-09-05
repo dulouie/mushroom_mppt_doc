@@ -35,11 +35,10 @@ according to
 ([\[eq:schwingungsgehalt\]](#eq:schwingungsgehalt){reference-type="ref"
 reference="eq:schwingungsgehalt"}).
 
-$$\label{eq:schwingungsgehalt}
-r_{u} = \frac{V_{ac_{eff}}}{|V_{dc_{eff}}|} = \frac{0.0476V}{29.7V} = \num{1.6e-3}$$
+$$ \label{eq:schwingungsgehalt}
+r_{u} = \frac{V_{ac_{eff}}}{|V_{dc_{eff}}|} = \frac{0.0476V}{29.7V} = {1.6e-3} $$
 
-Next, the characteristic curve of the [pv]{acronym-label="pv"
-acronym-form="singular+short"}-emulator is to be recorded, for this the
+Next, the characteristic curve of the PV-emulator is to be recorded, for this the
 VI-scanner algorithm is used and extended by the recording function of
 the measured data to a SD-card, furthermore the duty cycle is set
 directly, thus the PI-controller is not used. The PV emulator is
@@ -47,9 +46,9 @@ operated with a current source with a limitation of $I=5A$, the VI
 characteristic can be seen in figure
 [\[fig:iu-kenn-pvemu1\]](#fig:iu-kenn-pvemu1){reference-type="ref"
 reference="fig:iu-kenn-pvemu1"} and shows the typical characteristic of
-an [pv]{acronym-label="pv" acronym-form="singular+short"}-module. In
+an PV-module. In
 addition, the power is shown on another axis, from which the global
-[mpp]{acronym-label="mpp" acronym-form="singular+short"} can be easily
+MPP can be easily
 read. This experimental test of the characteristic curve recording shows
 the general functionality of the basic functions of the solar module
 optimizer, in particular the measurement of voltage and current at the
@@ -71,15 +70,12 @@ diodes $D_{1}$ to $D_{20}$ and current source $I_{2}$ is connected to
 diodes $D_{21}$ to $D_{30}$. The VI-characteristic shows here a clearly
 changed course of the current over the voltage, already at a voltage of
 approx. $V_{pv}=14V$ the current breaks down from $I_{pv}=4A$ to
-$I_{pv}=2A$. While only one global [mpp]{acronym-label="mpp"
-acronym-form="singular+short"} appears in the [pu]{acronym-label="pu"
-acronym-form="singular+short"} characteristic in the experiment without
+$I_{pv}=2A$. While only one global MPP appears in the PV-characteristic in the experiment without
 shading from Figure
 [\[fig:iu-kenn-pvemu1\]](#fig:iu-kenn-pvemu1){reference-type="ref"
-reference="fig:iu-kenn-pvemu1"}, two [mpp]{acronym-label="mpp"
-acronym-form="singular+short"} become visible here. These two
-[mpp]{acronym-label="mpp" acronym-form="singular+short"} are also called
-local [mpp]{acronym-label="mpp" acronym-form="singular+short"} and are
+reference="fig:iu-kenn-pvemu1"}, two MPP become visible here. These two
+MPP are also called
+local MPP and are
 the challenge for the next chapter
 [7.2](#kap:algovergleich){reference-type="ref"
 reference="kap:algovergleich"}, where the two algorithms are tested and

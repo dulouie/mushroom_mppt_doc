@@ -54,24 +54,23 @@ reason for this is to provide enough leeway for a possible overload. The
 voltage at the output shall cover a range between $15V<V_{out}<50V$ to
 be compatible with different loads. The MPPT controller is to be
 realised with a programmable microcontroller, which drives the boost
-converter on its output side with a [pwm]{acronym-label="pwm"
-acronym-form="singular+short"}. As a peripheral, the controller already
-has a [pwm]{acronym-label="pwm" acronym-form="singular+short"} module
+converter on its output side with a PWM. As a peripheral, the controller already
+has a PWM module
 built in, this generates the required switching signal to control the
-[mosfet]{acronym-label="mosfet" acronym-form="singular+short"} and thus
+Mosfet and thus
 also modulate the duty cycle $d$. On the input side, two pieces of
 information about the solar module are needed, the current voltage
 $V_{pv}$ and the current $I_{pv}$. The microcontroller is equipped with
-an [adc]{acronym-label="adc" acronym-form="singular+short"}, which is to
+an ADC, which is to
 be used for the acquisition of this information. The voltages are to be
 made compatible with the measurable range of the
-[adc]{acronym-label="adc" acronym-form="singular+short"} via voltage
+ADC via voltage
 dividers. The current is to be measured via a Hall-effect sensor chip,
 which outputs an analogue voltage that can also be measured with the
-[adc]{acronym-label="adc" acronym-form="singular+short"}. The
-[mpp]{acronym-label="mpp" acronym-form="singular+short"} controller
+ADC. The
+MPPT controller
 either directly sets the duty cycle $d$ for the
-[pwm]{acronym-label="pwm" acronym-form="singular+short"} of the boost
+PWM of the boost
 converter at its output or it outputs a reference voltage $vRef$, this
 reference voltage is then passed on to a PI controller which regulates
 the output voltage $V_{out}$ and tries to regulate to the reference

@@ -25,11 +25,10 @@ value is then multiplied by 65536 and the result rounded to the nearest
 integer to obtain the duty cycle as a 16-bit value. Finally, the PWM
 dutycycle is set to the calculated value using the *duty_u16 method()*.
 
-::: listing
-``` {.python frame="lines" linenos="" xleftmargin="2em"}
+
+```python
 def setDutyCycle(self, duty):
     '''Set mosfet dutycycle for boost converter'''
     self.duty = int(((100 - duty) / 100) * 65536)
     self.pwm.duty_u16(self.duty)
 ```
-:::

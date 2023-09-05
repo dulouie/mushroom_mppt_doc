@@ -7,9 +7,8 @@ parent: Hardware implementation
 
 # Gatedriver {#kap:gatetreiber}
 
-The [mosfet]{acronym-label="mosfet" acronym-form="singular+short"} is to
-be controlled by a microcontroller with a [pwm]{acronym-label="pwm"
-acronym-form="singular+short"}. The output pin of the microcontroller
+The mosfet is to
+be controlled by a microcontroller with a pwm. The output pin of the microcontroller
 has a maximum voltage of $3.2V$, but in order to be able to switch the
 power mosfet completely, a voltage of at least $10V$ is required and
 thus the mosfet cannot be operated directly with the microcontroller.

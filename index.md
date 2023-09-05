@@ -6,16 +6,15 @@ nav_order: 1
 
 # Solar Module Optimizer Mushroom MPPT
 
-![Hardware](assets/image/hardware2.jpg)
+![Hardware](assets/image/hardware2.png)
 
 ## Implementation of a programmable solar module optimiser to investigate different MPPT algorithms in the presence of shading
 
 The bachelor thesis deals with the development of a programmable solar
 module optimizer capable of testing and evaluating different
-[mppt]{acronym-label="mppt" acronym-form="singular+short"}-algorithms
+MPPT-algorithms
 using higher level programming language. The goal of the project is to
-develop a platform for the comparison of [mppt]{acronym-label="mppt"
-acronym-form="singular+short"}-algorithms. For this purpose, the
+develop a platform for the comparison of MPPT-algorithms. For this purpose, the
 required components and circuits will be selected and implemented. The
 components used will be addressed and the software for the control by a
 microcontroller will be implemented. The programmable approach offers
