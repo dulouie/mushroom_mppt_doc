@@ -56,13 +56,12 @@ The chip is available in different variants with different sensitivities $S$. Wh
 The design parameters for the calculated output range are shown in the
 table [2].
 
-| Design parameter              |  Value  |          
-|:------------------------------|:--------|
-| $Swing_{vs}$                  | $0.20V$ |
-| $V_{out,max}$                 | $0.20V$ |
-| $V_{out,0A}\:at\:V_{vs,min}$  | $0.20V$ |
-| $V_{out,max} - V_{out,0A}$    | $2.58V$ |
-
+| **Design parameter**         | **Value** |
+|------------------------------|-----------|
+| $Swing_{vs}$                 | $0.20V$   |
+| $V_{out,max}$                | $2.90V$   |
+| $V_{out,0A}~at~V_{vs,min}$ | $0.31V$   |
+| $V_{out,max} - V_{out,0A}$   | $2.58V$   |
 
 The parameters show a maximum positive linear voltage step of $2.58V$. In order to select the appropriate sensitivity that fully utilizes this linear range, the maximum current is calculated according to \eqref{eq:ibmax}, where $S$ are the different sensitivity variants of the sensor.
 

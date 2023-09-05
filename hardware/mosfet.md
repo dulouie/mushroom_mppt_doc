@@ -71,15 +71,16 @@ describes how much charge flows into the gate when fully switched.
 Smaller charges allow faster switching, so the charge is chosen to allow
 the switching frequency of $f_{s}=50kHz$.
 
-| Parameter                        | Wert             |
-|----------------------------------|------------------|
-| $V_{DSS}$                        | $100V$           |
-| $R_{DS(on)}~at~V_{GS}=10V$       | $5.9m\Omega$     |
-| $I_{D}$                          | $75A$            |
-| $V_{GS_{max}}$                   | $\pm 20V$        |
-| $Q_{GS}~at~U_{GS}=10V$           | $14nC$           |
-| $R_{thJA}$                       | $40 ^\circ C/W$  |
-| $R_{J}$                          | $+175 ^\circ C$  |
+| **Parameter**                    | **Wert**        |
+|----------------------------------|-----------------|
+| $V_{DSS}$                        | $100V$          |
+| $R_{DS(on)}~at~V_{GS}=10V$ | $5.9m\Omega$    |
+| $I_{D}$                          | $75A$           |
+| $V_{GS_{max}}$                   | $\pm 20V$       |
+| $Q_{GS}~at~U_{GS}=10V$         | $14nC$          |
+| $R_{thJA}$                       | $40 ^\circ C/W$ |
+| $R_{J}$                          | $+175 ^\circ C$ |
+
 
 
 The N-channel mosfet *SQM70060EL* [@datasheet:SQM70060EL] from
