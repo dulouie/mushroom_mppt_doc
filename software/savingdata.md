@@ -34,8 +34,9 @@ The actual writing of the data to the SD card is done in Listing
 [\[listing:8\]](#listing:8){reference-type="ref" reference="listing:8"},
 here the file header is set first so that the correct variables can be
 assigned to the data later. The code uses a loop to vary the duty cycle
-of the device and measure the performance depending on it. The duty
-cycle is increased incrementally from 0% to 70%. After each increase in
+of the device and measure the performance depending on it.
+
+The duty cycle is increased incrementally from 0% to 70%. After each increase in
 duty cycle, the voltage, current, and power of the device are measured
 and written to a file. The *file.flush()* command ensures that the data
 is written to the file immediately and does not just remain in the

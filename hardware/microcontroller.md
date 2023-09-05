@@ -15,13 +15,13 @@ compatibility with *MicroPython*. This makes programming easier and
 speeds up the development of a prototype. The RP2040 has at least 4
 ADC which are
 important for analog signal acquisition, these are used for various
-applications such as voltage measurement and current measurement.\
+applications such as voltage measurement and current measurement.
 
 Another aspect is the speed of the controller. The RP2040 has a
 dual-core architecture and a clock frequency of up to 133 MHz. This
 enables it to perform complex calculations quickly and process data in
 real time, even though it is programmed with the slow language
-*Micropython*.\
+*Micropython*.
 
 Another feature of the RP2040 is its PWM capability, which allows fine
 control of analog signals. The controller is capable of generating PWM

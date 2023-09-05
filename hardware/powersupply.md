@@ -14,7 +14,8 @@ regulator to regulate the from up to $30V$ input voltage to a constant
 $12V$ output voltage for the mosfet. Another linear regulator is used to
 provide a constant $3.3V$ voltage for the microcontroller and sensors.
 Both linear regulators feature good stability, which ensures that the
-generated voltages are stable and reliable.\
+generated voltages are stable and reliable.
+
 The voltage regulators are implemented according to the data sheet, here
 additional capacitors are added on input and output side, with component
 values $C_{1}=C_{2}=330nF$, $C_{3}=10\mu F$ and $C_{4}=22\mu F$, the

@@ -12,8 +12,9 @@ system, which may distort the real value. Applying filters can reduce
 the noise and improve the accuracy of the measurements. The *FilterAvg*
 class from Listing [\[listing:5\]](#listing:5){reference-type="ref"
 reference="listing:5"} provides a simple average filter for
-ADC samples. It
-requires the instance of the *ADC* class and the number of samples to
+ADC samples.
+
+It requires the instance of the *ADC* class and the number of samples to
 average. In the *calc()* method, the sum of the samples in a buffer
 *buf* is added up and divided by the number of samples at the end. This
 calculates the average value and returns it as a filtered value.Ṫhis

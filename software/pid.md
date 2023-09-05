@@ -18,7 +18,8 @@ of these components, an actuating value is calculated, which in turn
 acts on the process to reduce the deviation. The *simple-pid* library is
 used in this project to simplify the implementation of the PID
 controller to regulate the boost converter output voltage to the
-specified setpoint.\
+specified setpoint.
+
 In Listing [\[listing:6\]](#listing:6){reference-type="ref"
 reference="listing:6"} a simple control loop is implemented, this
 controls the output voltage of the boost converter constantly to $25V$.
@@ -44,7 +45,9 @@ process, the gain *$K_{P}$* is gradually increased until the system
 begins to oscillate. The period of these oscillations is measured with
 an oscilloscope, which determines the time constant of the boost
 controller, here a critical gain of $K_{u}=4.03$ and a time constant of
-$T_{u}=36ms$ is obtained. In this project, a PI controller is initially
+$T_{u}=36ms$ is obtained.
+
+In this project, a PI controller is initially
 chosen because the control deviation should be kept to a minimum and
 overshoot is undesirable. The parameters $K_{p}=1.82$ and $K_{i}=60.45$
 for the PI controller are calculated according to table
