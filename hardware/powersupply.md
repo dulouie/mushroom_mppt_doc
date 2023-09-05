@@ -16,7 +16,7 @@ provide a constant $3.3V$ voltage for the microcontroller and sensors.
 Both linear regulators feature good stability, which ensures that the
 generated voltages are stable and reliable.
 
-![image](/assets/image/spannungsversorgung.svg)
+![image](assets/image/spannungsversorgung.svg)
 
 The voltage regulators are implemented according to the data sheet, here
 additional capacitors are added on input and output side, with component

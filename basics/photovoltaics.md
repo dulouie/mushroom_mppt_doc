@@ -19,7 +19,7 @@ on the y-axis and the voltage on the x-axis and thus provides
 information about the behaviour of the module under different
 environmental influences, irradiation and shading.
 
-![image](/assets/image/leistungsanpassung1.svg)
+![image](assets/image/leistungsanpassung1.svg)
 
 Figure [\[fig:ui-kenn1\]](#fig:ui-kenn1) shows the characteristic curve of an ideal PV
 module. From this it can be seen that the behaviour of current to

@@ -35,9 +35,9 @@ reference="fig:iu-kenn-emu-algo1"}. As expected, the algorithm scans up
 to the global MPP,
 and oscillates around this point in small steps.
 
-![image](/assets/image/pv-emu-perturb.svg)
+![image](assets/image/pv-emu-perturb.svg)
 
-![image](/assets/image/pv-emu-perturb_verschattet.svg)
+![image](assets/image/pv-emu-perturb_verschattet.svg)
 
 The algorithm can solve this task satisfactorily and shows how easy the
 search for the MPP
@@ -71,9 +71,9 @@ reference="fig:iu-kenn-emu-algo2-verschattet"} coincide well this time
 with the global MPP
 of the shaded PV emulator.
 
-![image](/assets/image/pv-emu-iu-scanner-unverschattet.svg)
+![image](assets/image/pv-emu-iu-scanner-unverschattet.svg)
 
-![image](/assets/image/pv-emu-iu-scanner-verschattet.svg)
+![image](assets/image/pv-emu-iu-scanner-verschattet.svg)
 
 In summary, the PO
 algorithm is clearly inferior to the IU scanner algorithm in terms of

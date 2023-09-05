@@ -17,7 +17,7 @@ input resistance can be changed by adjusting the duty cycle. The step-up
 converter is shown as a block in this illustration; other DC/DC
 converters can also be used here.
 
-![image](/assets/image/konzept5.png)
+![image](assets/image/konzept5.png)
 
 The MPPT method is
 realised with an MPPT controller. This requires information about the PV
@@ -77,5 +77,5 @@ voltage $vRef$ with the manipulated variable $d$ i.e. the duty cycle of
 the boost converter. The implementation will show which method works
 more reliably.
 
-![image](/assets/image/konzept7.png)
+![image](assets/image/konzept7.png)
 
