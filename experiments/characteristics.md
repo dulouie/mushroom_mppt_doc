@@ -26,8 +26,7 @@ $\Delta U_{out_{mess}}=0.146V$ in the measurement and is thus $46mV$
 greater than required. However, this does not affect the function of the
 module optimizer.
 
-![image](import/restwelligkeit1.png){width="1.0\\linewidth"}
-[]{#fig:restwelligkeit1 label="fig:restwelligkeit1"}
+![image](/assets/image/restwelligkeit1.png)
 
 The measurements show a DC rms value of $V_{dc_{eff}}=29.7V$ and an AC
 rms value of $V_{ac_{eff}}=47.6mV$, giving a ripple of $0.16\%$
@@ -55,8 +54,7 @@ optimizer, in particular the measurement of voltage and current at the
 solar module, the control of the duty cycle for the boost converter and
 the processing of the collected data.
 
-![image](import/pv-emu1.pdf){width="0.8\\linewidth"}
-[]{#fig:iu-kenn-pvemu1 label="fig:iu-kenn-pvemu1"}
+![image](/assets/image/pv-emu1.svg)
 
 The VI curve with one third of the solar module shaded is shown in
 Figure
@@ -81,5 +79,5 @@ the challenge for the next chapter
 reference="kap:algovergleich"}, where the two algorithms are tested and
 compared.
 
-![image](import/pv-emu3.pdf){width="0.8\\linewidth"}
-[]{#fig:iu-kenn-pvemu2 label="fig:iu-kenn-pvemu2"}
+![image](/assets/image/pv-emu2.svg)
+

@@ -18,8 +18,10 @@ The aim is to show the advantages and disadvantages of the different
 algorithms in order to identify the optimal method for the application
 of the solar module optimizer. For the experiments, an ohmic heating mat
 with a resistance of $R_{L}=24\Omega$ is connected to the output of the
-module optimizer.\
-\
+module optimizer.
+
+![image](/assets/image/pv_emulator1.svg)
+
 In order to keep the experiments comparable and to always have the same
 laboratory conditions, no experimental trial with a
 PV-module under
@@ -35,8 +37,7 @@ reference="fig:pvemu1"}. The number of diodes, the maximum current of
 the source and the resistor values can be varied to change the
 characteristic.
 
-![image](import/pv_emulator1.pdf){width="0.7\\linewidth"} []{#fig:pvemu1
-label="fig:pvemu1"}
+![image](/assets/image/pv_emulator2.svg)
 
 For this experimental setup, power devices designed for higher heat
 generation are used, such as the power diode *P600D* with a number of
@@ -58,5 +59,4 @@ module that is one-third shaded, with an open circuit voltage
 $V_{oc}=21V$, the short circuit current of $I_{sc}=5A$, and two bypass
 diodes.
 
-![image](import/pv_emulator2.pdf){width="0.7\\linewidth"} []{#fig:pvemu2
-label="fig:pvemu2"}
+![image](/assets/image/pvemulator.jpg)

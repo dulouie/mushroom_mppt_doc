@@ -66,8 +66,12 @@ reference="fig:ir2104"} the complete control of the gate is shown. The
 *IR2104S* [@datasheet:IR2104] is a half-bridge driver where the
 high-side connections are not used in this application. These are
 connected to ground with an $R_{3}=10k\Omega$ resistor so that there are
-no open pins in the circuit. $$\label{eq:Rpwm}
-R_{1} = R_{2} = \frac{V_{vcc}}{I} = \frac{3.2V}{1mA} = 3.2k\Omega$$ The
+no open pins in the circuit. 
+
+$$\label{eq:Rpwm}
+R_{1} = R_{2} = \frac{V_{vcc}}{I} = \frac{3.2V}{1mA} = 3.2k\Omega$$
+
+The
 *PWM* and *SD* signals come from the microcontroller with a $3.3V$
 level. The series resistors are calculated according to
 ([\[eq:Rpwm\]](#eq:Rpwm){reference-type="ref" reference="eq:Rpwm"}).
@@ -79,5 +83,4 @@ circuits this is an important element. Because higher currents flow very
 quickly here and the power supply is more heavily loaded as a
 result [@IntelligentEnergy p.259] [@datasheet:SLUA618A].
 
-![image](import/ir2104.pdf){width="0.9\\linewidth"} []{#fig:ir2104
-label="fig:ir2104"}
+![image](/assets/image/ir2104.svg)

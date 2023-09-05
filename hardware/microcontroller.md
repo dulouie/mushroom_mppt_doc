@@ -35,5 +35,4 @@ the gate driver are populated with resistors of
 $R_{pwm}=R_{sd}=330\Omega$ to limit the current to
 $1mA$ [@datasheet:RP2040].
 
-![image](import/rp2040.pdf){width="0.9\\linewidth"} []{#fig:rp2040
-label="fig:rp2040"}
+![image](/assets/image/rp2040.svg)

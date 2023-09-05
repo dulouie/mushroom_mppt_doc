@@ -33,5 +33,4 @@ situation. This leads to an unusable operating state, which the
 controller cannot leave by itself. For this reason, the duty cycle $d$
 is set directly [@PowerGreenEnergy p.313].
 
-![image](import/observeperturbflow.pdf){width="1.0\\linewidth"}
-[]{#fig:observeperturb label="fig:observeperturb"}
+![image](/assets/image/observeperturbflow.svg)

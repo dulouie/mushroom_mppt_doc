@@ -16,8 +16,7 @@ properties of the cell and varies with sunlight intensity, temperature
 and other factors. When the load is optimally matched to the internal
 resistance of the cell, the solar cell can deliver its maximum power.
 
-![image](import/leistungsanpass.pdf){width="0.5\\linewidth"}
-[]{#fig:leistanpass label="fig:leistanpass"}
+![image](/assets/image/konzept1.png)
 
 If a variable load resistor is connected to the solar cell, as shown in
 figure [\[fig:leistanpass\]](#fig:leistanpass), the dark red characteristic curve of the
@@ -39,5 +38,4 @@ resistance in order to be able to adjust the point of power and thus
 maximise the energy transport, such a circuit is presented in the next
 section [3.3](#kap:hochsetz) [@büttner p.37].
 
-![image](import/iu-kennlinie2.pdf){width="1.0\\linewidth"}
-[]
+TODO p5js

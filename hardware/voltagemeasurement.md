@@ -15,8 +15,7 @@ ADC, a voltage divider is dimensioned as shown in figure
 reference="fig:tiefpass"}, which only passes on a fraction of the high voltage but with the correct ratio to the ADC. The voltage divider ratio between
 $R_{1}$ and $R_{2}$ determines this ratio so that the input voltage of $V_{in}= 50V$ corresponds to a measured voltage at the ADC of $V_{adc} = 2.9V$. Some free space is built in here to have protection against overvoltages [@scherzmonk pp.56-57].
 
-![image](import/tiefpass.pdf){width="0.4\\linewidth"} []{#fig:tiefpass
-label="fig:tiefpass"}
+![image](/assets/image/spannungsteiler.svg)
 
 The resistance values for $R_{1}$ and $R_{2}$ are calculated as follows:
 

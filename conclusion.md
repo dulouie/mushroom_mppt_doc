@@ -59,7 +59,8 @@ constant laboratory conditions of a vi-characteristic curve of a
 PV-module, a
 PV-emulator was
 developed. This provides constant characteristics of the emulated solar
-module in order to compare the algorithms.\
+module in order to compare the algorithms.
+
 The PV emulator was
 then used to investigate and compare both algorithms, once without
 shading and once with shading. Here it turned out that the

@@ -3,7 +3,6 @@ title: Boost Converter
 layout: post
 nav_order: 3
 parent: Basics
-katex: True
 ---
 
 # Boost converter {#kap:hochsetz}
@@ -15,7 +14,7 @@ and their connection with a solar cell and a load resistor. The boost
 converter consists of a coil *L* at the input, a switch *Q* in the
 middle, a diode *D* and capacitor *C* at the output.
 
-![image](import/boost1.pdf)
+![image](/assets/image/boost1.svg)
 
 There are two states in the circuit:
 
@@ -30,8 +29,7 @@ input to output in this state. The capacitor *C* discharges its charge
 to the load resistor. During this on-time *dTs*, the voltage across the
 coil is $V_{pv}$ and the current increases linearly to a peak. 
 
-![image](import/boost2.pdf){width="0.9\\linewidth"} []{#fig:boost-on
-label="fig:boost-on"}
+![image](/assets/image/boost2.svg)
 
 During the switch-off time *(1-d)Ts*, the coil tries to maintain the
 current flow and to release the energy that was stored in the form of
@@ -46,7 +44,7 @@ magnetic field of the coil is reduced. Figure
 In the next time window, the switch starts again in the closed state and
 the cycle begins again.
 
-![image](import/boost3.pdf){width="0.9\\linewidth"} []
+![image](/assets/image/boost3.svg)
 
 If the switch is switched with a fixed period *Ts*, a voltage can be
 measured at the output that is higher than the voltage at the input. To
@@ -59,7 +57,7 @@ of the circuit. This point will be discussed in more detail in the
 following, as it is important for understanding the solar opdul
 optimiser.
 
-![image](import/timing1.pdf){width="1.0\\linewidth"} []
+![image](/assets/image/timing1.svg)
 
 For this, the relationship between input and output voltage is first
 derived by considering the voltage across the coil over both states.
@@ -92,7 +90,6 @@ current goes to the load resistor. Over an entire period, current across
 the capacitor can be set to zero, as given in equation
 ([\[InOutCurrent\]](#InOutCurrent){reference-type="ref"
 reference="InOutCurrent"}).
-
 
 $$ \label{InOutCurrent}
 (-I_{out})dT_{s}+(I_{in}-I_{out})(1-d)T_{s}=0 $$
@@ -130,5 +127,4 @@ solar module can be operated at the optimal operating point by
 modulating the duty cycle [@IntelligentEnergy p.254][@UmanandPower
 p.207-213].
 
-![image](import/boost_Rin.pdf){width="1.0\\linewidth"} []{#fig:boostRin
-label="fig:boostRin"}
+![image](/assets/image/boost_Rin.svg)

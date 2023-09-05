@@ -54,8 +54,7 @@ class MPPTController():
 The *MPPTController* class is implemented as a singleton to ensure that
 only one instance of this class exists to access the hardware. The
 singleton design pattern avoids collisions and inconsistencies when
-accessing the hardware resource and improves structure and
-maintainability.
+accessing the hardware resource and improves structure and maintainability.
 
 In addition, implementation as a singleton provides the
 advantage of encapsulation between the peripheral and the algorithm that

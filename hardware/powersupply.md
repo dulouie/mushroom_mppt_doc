@@ -16,12 +16,11 @@ provide a constant $3.3V$ voltage for the microcontroller and sensors.
 Both linear regulators feature good stability, which ensures that the
 generated voltages are stable and reliable.
 
+![image](/assets/image/spannungsversorgung.svg)
+
 The voltage regulators are implemented according to the data sheet, here
 additional capacitors are added on input and output side, with component
 values $C_{1}=C_{2}=330nF$, $C_{3}=10\mu F$ and $C_{4}=22\mu F$, the
 interconnection is shown in figure
 [\[fig:versorungung\]](#fig:versorungung){reference-type="ref"
 reference="fig:versorungung"} [@datasheet:LM7812].
-
-![image](import/spannungsversorgung.pdf){width="0.9\\linewidth"}
-[]{#fig:versorungung label="fig:versorungung"}

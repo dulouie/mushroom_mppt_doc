@@ -19,6 +19,8 @@ spikes, but causes a new problem during the switch-on time. When the
 mosfet switches on again, the capacitor is discharged via the
 mosfet and this causes a large discharge current spike that can also destroy the unit.
 
+![image](/assets/image/snubber1.svg)
+
 
 To limit the current, the resistor $R$ is connected in series with the
 capacitor. However, the resistor is only to limit the current during the
@@ -30,8 +32,7 @@ switch-on phase, as shown in figure
 reference="fig:snubber"}b [@UmanandPower p.80][@IntelligentEnergy
 p.261].
 
-![image](import/snubber1.pdf){width="0.9\\linewidth"} []{#fig:snubber
-label="fig:snubber"}
+![image](/assets/image/snubber2.svg)
 
 There are different ways to determine the values for $R_{snub}$ and
 $C_{snub}$. Here, a way will be shown that is based on the assumption
@@ -81,5 +82,4 @@ with an oscilloscope, without snubbercircuit in red and in comparison to
 this with the snubbercircuit of the calculated values in green. A
 considerable damping of the oscillation can be observed [@biricha].
 
-![image](import/snubber-ring.png){width="0.9\\linewidth"}
-[]{#fig:snubber-ring label="fig:snubber-ring"}
+![image](/assets/image/snubber-ring.png)

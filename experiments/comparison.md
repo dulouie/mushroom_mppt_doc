@@ -35,8 +35,9 @@ reference="fig:iu-kenn-emu-algo1"}. As expected, the algorithm scans up
 to the global MPP,
 and oscillates around this point in small steps.
 
-![image](import/pv-emu-perturb.pdf){width="0.8\\linewidth"}
-[]{#fig:iu-kenn-emu-algo1 label="fig:iu-kenn-emu-algo1"}
+![image](/assets/image/pv-emu-perturb.svg)
+
+![image](/assets/image/pv-emu-perturb_verschattet.svg)
 
 The algorithm can solve this task satisfactorily and shows how easy the
 search for the MPP
@@ -60,14 +61,6 @@ this characteristic curve is well hit with some small deviations, the
 deviations are attributed to smaller measurement deviations and the
 heating of the diodes in the PV emulator.
 
-![image](import/pv-emu-perturb_verschattet.pdf){width="0.8\\linewidth"}
-[]{#fig:iu-kenn-emu-algo1-verschattet
-label="fig:iu-kenn-emu-algo1-verschattet"}
-
-![image](import/pv-emu-iu-scanner-unverschattet.pdf){width="0.8\\linewidth"}
-[]{#fig:iu-kenn-emu-algo2-unverschattet
-label="fig:iu-kenn-emu-algo2-unverschattet"}
-
 The test with the VI-scanner and a shadowing of the
 PV emulator shows
 that by scanning the characteristic line several times, the global more
@@ -76,8 +69,12 @@ easily found. The red operating points from Figure
 [\[fig:iu-kenn-emu-algo2-verschattet\]](#fig:iu-kenn-emu-algo2-verschattet){reference-type="ref"
 reference="fig:iu-kenn-emu-algo2-verschattet"} coincide well this time
 with the global MPP
-of the shaded PV emulator.\
-\
+of the shaded PV emulator.
+
+![image](/assets/image/pv-emu-iu-scanner-unverschattet.svg)
+
+![image](/assets/image/pv-emu-iu-scanner-verschattet.svg)
+
 In summary, the PO
 algorithm is clearly inferior to the IU scanner algorithm in terms of
 the global MPP. In
@@ -85,7 +82,3 @@ return, the PO can
 react faster to short-term shifts of the characteristic curve, because
 here the MPP is not
 set for the next 60 seconds.
-
-![image](import/pv-emu-iu-scanner-verschattet.pdf){width="0.8\\linewidth"}
-[]{#fig:iu-kenn-emu-algo2-verschattet
-label="fig:iu-kenn-emu-algo2-verschattet"}

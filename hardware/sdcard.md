@@ -25,6 +25,3 @@ used, this can be directly connected to the SPI bus according to figure
 [\[fig:sdcard\]](#fig:sdcard){reference-type="ref"
 reference="fig:sdcard"} and is the compatible with supply voltage of
 $3.2V$.
-
-![image](import/sdcard.pdf){width="0.5\\linewidth"} []{#fig:sdcard
-label="fig:sdcard"}

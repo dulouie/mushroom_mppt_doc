@@ -84,5 +84,4 @@ $V_{vs}=3.2V$ of the chip, so the whole range of the
 ADC is used.\
 Figure [\[fig:tmcs1108\]] shows how the chip is wired up, this involves routing the high current to be measured through two input pins and two output pins, any heat generated is dissipated through generous copper areas and vias. Another important element is the bypass capacitor $C_{bypass}=0.1\mu F$ of the chip's power supply, it compensates voltage fluctuations and decouples the chip from the rest of the components, without the bypass capacitor the measurement error of the current measurement would be significantly larger. Its placement should be as close as possible to the pin *VS* of the supply voltage. 
 
-![image](import/tmcs1108.pdf){width="0.9\\linewidth"} []{#fig:tmcs1108
-label="fig:tmcs1108"}
+![image](/assets/image/tmcs1108.svg)
