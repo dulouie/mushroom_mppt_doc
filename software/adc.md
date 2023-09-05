@@ -31,13 +31,14 @@ def getfilteredADC(self):
     self.filtered[2] = self.filter3.calc()
     self.filtered[3] = self.filter4.calc()
 ```
+[Listing 2](#listing:2)
 
-The *getfilteredADC()* method in the above Listing
+The *getfilteredADC()* method in [Listing 2](#listing:2)
 is a function in the *MPPTController* class that is used to sample the
 voltage and current data from the ADCs and smooth it through filtering.
 This involves filtering the raw data from the four ADC channels. The
 filtering is necessary to filter out measurement inaccuracies of the
-[adc]{acronym-label="adc" acronym-form="singular+short"}. The method
+ADC. The method
 first calls the calc() method of the FilterAvg object for each ADC
 channel to get the filtered data. This filtered data is then written to
 the filtered array of the MPPTController class, which is later used by
@@ -60,20 +61,17 @@ def calcADCData(self):
     self.power[0] = round(self.voltage[0] * self.current[0], 2)
     self.power[1] = round(self.voltage[1] * self.current[1], 2)
 ```
+[Listing 3](#listing:3)
 
-
-The *calcADCData()* method from Listing
-[\[listing:3\]](#listing:3){reference-type="ref" reference="listing:3"}
+The *calcADCData()* method from
+[Listing 3](#listing:3)
 in the *MPPTController* class is used to convert the raw ADC data into
 voltage and current values. For the voltage measurement, a voltage
 divider with resistors of 36 kOhm and 2.2 kOhm is used, where *voltDiv*
 specifies the divider factor from equation
-([\[voltageDiv1\]](#voltageDiv1){reference-type="ref"
-reference="voltageDiv1"}). The factor *adcScaleFac* gives the conversion
-factor from ([\[eq:adc\]](#eq:adc){reference-type="ref"
-reference="eq:adc"}). The converted voltage values are multiplied with
+\eqref{voltageDiv1}. The factor *adcScaleFac* gives the conversion
+factor from \eqref{eq:adc1}. The converted voltage values are multiplied with
 correction factors *corr* and rounded. For the current measurement the
 transfer function
-[\[eq:tmcs1108trans\]](#eq:tmcs1108trans){reference-type="ref"
-reference="eq:tmcs1108trans"} from the last chapter is used.
+\eqref{eq:tmcs1108trans} from the last chapter is used.
 
