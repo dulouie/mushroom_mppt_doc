@@ -1,20 +1,15 @@
 ---
-title: Currentmeasurement
+title: Current measurement
 layout: post
 nav_order: 7
 parent: Hardware implementation
 ---
 
-# Currentmeasurement {#kap:strommessung}
+# Current measurement {#kap:strommessung}
 
 For the measurement of the current, a different method is required than
 for the voltage measurement. The current can only ever be measured
-indirectly, either via a voltage drop across a shunt resistor and Ohm's
-law $I=V_{shunt}/R_{shunt}$ or via the generated magnetic field of a
-current-carrying conductor. In this paper, the latter will be
-demonstrated by the implementation of a Hall-effect sensor chip. The
-TMCS1108 chip from Texas Instruments is chosen because it meets the
-following requirements:
+indirectly, either via a voltage drop across a shunt resistor and Ohm's law $I=V_{shunt}/R_{shunt}$ or via the generated magnetic field of a current-carrying conductor. In this paper, the latter will be demonstrated by the implementation of a Hall-effect sensor chip. The TMCS1108 chip from Texas Instruments is chosen because it meets the following requirements:
 
 -   voltage range $\pm100V > 50V$ of the solar module optimizer.
 
@@ -26,8 +21,7 @@ following requirements:
 -   Low error of $\pm1\%$
 
 -   Analog output voltage $0V<V_{out}<3.3V$ matching the
-    [adc]{acronym-label="adc" acronym-form="singular+short"} of the
-    microcontroller
+    ADC of the microcontroller
 
 The following assumptions are made for the design:
 
@@ -39,11 +33,7 @@ The following assumptions are made for the design:
 
 -   $Swing_{vs} = 0.2 V$ fluctuations of supply voltage
 
-The chip is available in different variants with different sensitivities
-$S$. When choosing, it should be noted that the sensitivity should not
-be chosen too small, otherwise the connected [adc]{acronym-label="adc"
-acronym-form="singular+short"} can no longer measure the voltage
-changes, for the selection proceed as follows:
+The chip is available in different variants with different sensitivities $S$. When choosing, it should be noted that the sensitivity should not be chosen too small, otherwise the connected ADC can no longer measure the voltage changes, for the selection proceed as follows:
 
 -   Should the current be measured unidirectionally or bidirectionally?
     The current flows only in one direction, so a variant of type
@@ -52,41 +42,32 @@ changes, for the selection proceed as follows:
 -   Output voltage at $I_{in} =0A$ is:
     $V_{out,0A}= 0.1 \cdot V_{vs} = 0.32V$
 
--   The transfer function is calculated according to
-    ([\[eq:tmcs1108trans\]](#eq:tmcs1108trans){reference-type="ref"
-    reference="eq:tmcs1108trans"}) $$\label{eq:tmcs1108trans}
-            V_{out} = I_{in} \cdot S + V_{out,0A}$$
+-   The transfer function is calculated according to \eqref{eq:tmcs1108trans} 
+    
+    $$ \label{eq:tmcs1108trans} V_{out} = I_{in} \cdot S + V_{out,0A}$$
 
 -   To maximize sensitivity over the desired linear measurement range,
     the maximum linear output voltage range
-    ([\[eq:tmcs1108linaussteuer\]](#eq:tmcs1108linaussteuer){reference-type="ref"
-    reference="eq:tmcs1108linaussteuer"}) is calculated:
-    $$\label{eq:tmcs1108linaussteuer}
-            V_{out,max} - V_{out,0A} = V_{vs,min} - Swing_{vs} - 0.1 \cdot V_{vs,min}$$
+    \eqref{eq:tmcs1108linaussteuer} is calculated:
+
+    $$ \label{eq:tmcs1108linaussteuer}
+            V_{out,max} - V_{out,0A} = V_{vs,min} - Swing_{vs} - 0.1 \cdot V_{vs,min} $$
 
 The design parameters for the calculated output range are shown in the
-table [2](#table:tmcsdesign){reference-type="ref"
-reference="table:tmcsdesign"}.
+table [2].
 
-::: {#table:tmcsdesign}
-         Design parameter          Value
-  ------------------------------ ---------
-           $Swing_{vs}$           $0.20V$
-          $V_{out,max}$           $2.90V$
-   $V_{out,0A}\:at\:V_{vs,min}$   $0.31V$
-    $V_{out,max} - V_{out,0A}$    $2.58V$
+| Design parameter              |  Value  |          
+|:------------------------------|:--------|
+| $Swing_{vs}$                  | $0.20V$ |
+| $V_{out,max}$                 | $0.20V$ |
+| $V_{out,0A}\:at\:V_{vs,min}$  | $0.20V$ |
+| $V_{out,max} - V_{out,0A}$    | $2.58V$ |
 
-  : Design parameter TMCS1108
-:::
 
-The parameters show a maximum positive linear voltage step of $2.58V$.
-In order to select the appropriate sensitivity that fully utilizes this
-linear range, the maximum current is calculated according to
-([\[eq:ibmax\]](#eq:ibmax){reference-type="ref" reference="eq:ibmax"}),
-where $S$ are the different sensitivity variants of the sensor.
+The parameters show a maximum positive linear voltage step of $2.58V$. In order to select the appropriate sensitivity that fully utilizes this linear range, the maximum current is calculated according to \eqref{eq:ibmax}, where $S$ are the different sensitivity variants of the sensor.
 
-$$\label{eq:ibmax}
-I_{B,max} = \frac{V_{out,max} - V_{out,0A}}{S}$$
+$$ \label{eq:ibmax}
+I_{B,max} = \frac{V_{out,max} - V_{out,0A}}{S} $$
 
 The choice falls on the TMCS1108A3U [@datasheet:TMCS1108] because it
 covers a measuring range of ${0A \rightarrow +12.9A}$ at a supply
@@ -97,21 +78,11 @@ ${0A \rightarrow +10A}$ of the solar module optimizer.\
 The output voltage of the chip $VOUT$ should be as free of noise as
 possible to reduce measurement errors. Therefore, a low-pass filter with
 a cutoff frequency of $f_{c}=75Hz$ is also used here as shown in chapter
-[5.3](#kap:tiefpass){reference-type="ref" reference="kap:tiefpass"}. The
-maximum voltage at the [adc]{acronym-label="adc"
-acronym-form="singular+short"} is equal to the supply voltage
+[5.3](#kap:tiefpass). The
+maximum voltage at the ADC is equal to the supply voltage
 $V_{vs}=3.2V$ of the chip, so the whole range of the
-[adc]{acronym-label="adc" acronym-form="singular+short"} is used.\
-Figure [\[fig:tmcs1108\]](#fig:tmcs1108){reference-type="ref"
-reference="fig:tmcs1108"} shows how the chip is wired up, this involves
-routing the high current to be measured through two input pins and two
-output pins, any heat generated is dissipated through generous copper
-areas and vias. Another important element is the bypass capacitor
-$C_{bypass}=0.1\mu F$ of the chip's power supply, it compensates voltage
-fluctuations and decouples the chip from the rest of the components,
-without the bypass capacitor the measurement error of the current
-measurement would be significantly larger. Its placement should be as
-close as possible to the pin *VS* of the supply voltage. 
+ADC is used.\
+Figure [\[fig:tmcs1108\]] shows how the chip is wired up, this involves routing the high current to be measured through two input pins and two output pins, any heat generated is dissipated through generous copper areas and vias. Another important element is the bypass capacitor $C_{bypass}=0.1\mu F$ of the chip's power supply, it compensates voltage fluctuations and decouples the chip from the rest of the components, without the bypass capacitor the measurement error of the current measurement would be significantly larger. Its placement should be as close as possible to the pin *VS* of the supply voltage. 
 
 ![image](import/tmcs1108.pdf){width="0.9\\linewidth"} []{#fig:tmcs1108
 label="fig:tmcs1108"}
