@@ -78,3 +78,4 @@ considerable damping of the oscillation can be observed [@biricha].
 
 ###### Snubber ringing {#fig:snubber-ring}
 ![image](../assets/image/snubber-ring.png)
+*Note: poor picture Nyquist–Shannon sampling theorem violated*
