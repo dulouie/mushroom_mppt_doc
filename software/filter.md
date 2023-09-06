@@ -10,8 +10,7 @@ parent: Software implementation
 The *ADC* may perform inaccurate measurements due to noise in the
 system, which may distort the real value. Applying filters can reduce
 the noise and improve the accuracy of the measurements. The *FilterAvg*
-class from Listing [\[listing:5\]](#listing:5){reference-type="ref"
-reference="listing:5"} provides a simple average filter for
+class from [Listing](#softwarefilter) provides a simple average filter for
 ADC samples.
 
 It requires the instance of the *ADC* class and the number of samples to
@@ -21,6 +20,7 @@ calculates the average value and returns it as a filtered value.Ṫhis
 class is needed to minimize the noise of the raw data and provide a more
 accurate measurement.
 
+###### Listing software filter {#softwarefilter}
 
 ```python
 class FilterAvg():

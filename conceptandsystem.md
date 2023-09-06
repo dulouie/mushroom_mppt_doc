@@ -10,13 +10,12 @@ With the knowledge of the previous chapters, the concept of maximum
 power point tracking can now be demonstrated. As a rule, the resistance
 $R_{L}$ of the load connected to the PV module is not freely selectable
 and no power adjustment can be operated. The problem can be solved if
-the boost converter is connected between the PV module and the load. The
-figure [\[fig:mppt-konzept\]](#fig:mppt-konzept){reference-type="ref"
-reference="fig:mppt-konzept"} shows this circuit and illustrates how the
+the boost converter is connected between the PV module and the load. The [concept](#concept1) shows this circuit and illustrates how the
 input resistance can be changed by adjusting the duty cycle. The step-up
 converter is shown as a block in this illustration; other DC/DC
 converters can also be used here.
 
+###### Concept {#concept1}
 ![image](assets/image/konzept5.png)
 
 The MPPT method is
@@ -27,10 +26,8 @@ corresponding measuring units. With this information, an algorithm can
 find the MPPT and set the corresponding duty cycle $d$ at the boost
 converter. The duty cycle indirectly influences the input resistance of
 the converter, so it can be optimally adjusted to the PV module with the
-help of the line matching [@GreenEnergyCities
-p.157][@PowerGreenEnergy]. There are different methods to find the MPPT,
-in chapter [6.6](#kap:mpptalgo){reference-type="ref"
-reference="kap:mpptalgo"} we will go into more detail about the
+help of the line matching. There are different methods to find the MPPT,
+in chapter [mppt algorithms](algorithms) we will go into more detail about the
 algorithms discussed in this thesis.
 
 For the practical implementation, a system is to be designed from the
@@ -66,9 +63,7 @@ made compatible with the measurable range of the
 ADC via voltage
 dividers. The current is to be measured via a Hall-effect sensor chip,
 which outputs an analogue voltage that can also be measured with the
-ADC. The
-MPPT controller
-either directly sets the duty cycle $d$ for the
+ADC. The MPPT controller either directly sets the duty cycle $d$ for the
 PWM of the boost
 converter at its output or it outputs a reference voltage $vRef$, this
 reference voltage is then passed on to a PI controller which regulates

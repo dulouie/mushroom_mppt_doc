@@ -14,8 +14,7 @@ interval of several minutes and it is checked at which point the maximum
 power can be drawn. This operating point is then set for the next
 interval. 
 
-The code in Listing
-[\[listing:7\]](#listing:7){reference-type="ref" reference="listing:7"}
+The code in [VI scanner loop](#viscanner)
 uses two loops to find the maximum power point of the
 PV-module. It
 increments the duty cycle of the device from 0% to 70% and measures the
@@ -29,6 +28,8 @@ collected data. Finally, the duty cycle is set to the value of the
 maximum power point and the program waits 60 seconds before starting
 over. The waiting time can be configured as required to keep the module
 optimizer at this point for longer.
+
+###### VI Scanner loop {#viscanner}
 
 ```python
 power_curve =[]

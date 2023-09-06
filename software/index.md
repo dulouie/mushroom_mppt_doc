@@ -22,9 +22,12 @@ explained. The listings of the *Micropython* code are described in the
 text but shown without comments, this is based in the trivial properties
 of *Micropython* and the clarity. In order for the algorithm to access
 the peripherals of the microcontroller, a class *MPPTController* is
-created in Listing [\[listing:1\]](#listing:1){reference-type="ref"
-reference="listing:1"} using object-oriented programming. These make it
-possible to define various methods and attributes [@micropython].
+created in [Listing](#controllerclass) using object-oriented programming. These make it
+possible to define various methods and attributes.
+
+<!-- [@micropython] -->
+
+###### Listing Controller Class {#controllerclass}
 
 ```python
 @singleton
@@ -72,4 +75,6 @@ power, and duty cycle. The voltage, current, and power are each stored
 for the input side and the output side respectively. In addition, a
 PID is initialized
 to regulate the output voltage to the setpoint *vRef* passed by the MPPT
-algorithm [@singleton].
+algorithm.
+
+<!--[@singleton]-->

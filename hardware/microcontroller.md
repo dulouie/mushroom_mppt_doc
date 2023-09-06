@@ -26,13 +26,15 @@ real time, even though it is programmed with the slow language
 Another feature of the RP2040 is its PWM capability, which allows fine
 control of analog signals. The controller is capable of generating PWM
 outputs at a frequency of the required 50 kHz, which is important for
-controlling the duty cycle $d$.\
+controlling the duty cycle $d$.
+
 Specifically, the *XIAO RP2040* module from *Seeed Studio* is used, and
 the interconnection with the other parts of the project is shown in
-Figure [\[fig:rp2040\]](#fig:rp2040){reference-type="ref"
-reference="fig:rp2040"}. The two outputs *GPIO6* and *GPIO7* which drive
-the gate driver are populated with resistors of
-$R_{pwm}=R_{sd}=330\Omega$ to limit the current to
-$1mA$ [@datasheet:RP2040].
+[Figure](#fig:rp2040). The two outputs *GPIO6* and *GPIO7* which drive
+the gate driver are populated with resistors of $R_{pwm}=R_{sd}=330\Omega$ to limit the current to
+$1mA$.
 
+<!--[@datasheet:RP2040]-->
+
+###### Xiao RP2040 {#fig:rp2040}
 ![image](../assets/image/rp2040.svg)

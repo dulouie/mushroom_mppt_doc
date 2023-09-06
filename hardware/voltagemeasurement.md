@@ -5,16 +5,17 @@ nav_order: 5
 parent: Hardware implementation
 ---
 
-# Voltage measurement {#kap:spannungsmessnung}
+# Voltage measurement {#voltmeasure}
 
 For the algorithm of the MPPT controller, the input voltage and the output voltage at the solar module optimiser are required. These voltages are to be measured with a ADC, which is available as a peripheral as
 part of the microcontroller. The measurable voltage range of these
 ADC is $0V < V_{adc} < 3.3V$ and is thus significantly smaller than the voltages of $0V < V_{in/out} < 50V$ applied to the solar module optimiser. In order to be able to measure the larger voltages with the
-ADC, a voltage divider is dimensioned as shown in figure
-[\[fig:tiefpass\]](#fig:tiefpass){reference-type="ref"
-reference="fig:tiefpass"}, which only passes on a fraction of the high voltage but with the correct ratio to the ADC. The voltage divider ratio between
-$R_{1}$ and $R_{2}$ determines this ratio so that the input voltage of $V_{in}= 50V$ corresponds to a measured voltage at the ADC of $V_{adc} = 2.9V$. Some free space is built in here to have protection against overvoltages [@scherzmonk pp.56-57].
+ADC, a voltage divider is dimensioned as shown in [figure](#voltdivider), which only passes on a fraction of the high voltage but with the correct ratio to the ADC. The voltage divider ratio between
+$R_{1}$ and $R_{2}$ determines this ratio so that the input voltage of $V_{in}= 50V$ corresponds to a measured voltage at the ADC of $V_{adc} = 2.9V$. Some free space is built in here to have protection against overvoltages.
 
+<!--[@scherzmonk pp.56-57]-->
+
+###### Voltage divider {#voltdivider}
 ![image](../assets/image/spannungsteiler.svg)
 
 The resistance values for $R_{1}$ and $R_{2}$ are calculated as follows:

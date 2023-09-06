@@ -21,7 +21,4 @@ peripherals such as sensors, memory chips, displays, wireless modules,
 and many others. SPI allows fast and reliable transfer of data between
 devices over short distances and can be used in many applications due to
 its ease of implementation and low cost. A *SD Card Breakout Board* is
-used, this can be directly connected to the SPI bus according to figure
-[\[fig:sdcard\]](#fig:sdcard){reference-type="ref"
-reference="fig:sdcard"} and is the compatible with supply voltage of
-$3.2V$.
+used, this can be directly connected to the SPI bus according to [figure](#sdcard) and is the compatible with supply voltage of $3.2V$.

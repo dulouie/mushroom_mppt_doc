@@ -20,11 +20,12 @@ used in this project to simplify the implementation of the PID
 controller to regulate the boost converter output voltage to the
 specified setpoint.
 
-In Listing [\[listing:6\]](#listing:6){reference-type="ref"
-reference="listing:6"} a simple control loop is implemented, this
+In [Listing](#pidloop) a simple control loop is implemented, this
 controls the output voltage of the boost converter constantly to $25V$.
 The controller is additionally limited at its output to the minimum and
 maximum duty cycle $0\%$ to $70\%$ of the boost converter.
+
+###### Listing simple pid loop {#pidloop}
 
 ```python
 device.pid.tunings = (1.82, 60.45, 0)
@@ -50,11 +51,13 @@ $T_{u}=36ms$ is obtained.
 In this project, a PI controller is initially
 chosen because the control deviation should be kept to a minimum and
 overshoot is undesirable. The parameters $K_{p}=1.82$ and $K_{i}=60.45$
-for the PI controller are calculated according to table
-[3](#table:ziegler){reference-type="ref" reference="table:ziegler"}. For
+for the PI controller are calculated according to [pid parameter table](#pidparameter). For
 further optimization, an ordinary PID controller and a controller
-without overshoot are also listed
-here [@ziegler1942optimum; @simplepid].
+without overshoot are also listed here.
+
+<!-- [@ziegler1942optimum; @simplepid] -->
+
+###### Table PID parameters {#pidparameter}
 
 | Type         | $K_{p}$     | $K_{i}$              | $K_{d}$            |
 |--------------|-------------|----------------------|--------------------|

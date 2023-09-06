@@ -20,6 +20,8 @@ of the solar module optimizer. For the experiments, an ohmic heating mat
 with a resistance of $R_{L}=24\Omega$ is connected to the output of the
 module optimizer.
 
+###### Basic PV emulator {#pvbasic} 
+
 ![image](../assets/image/pv_emulator1.svg)
 
 In order to keep the experiments comparable and to always have the same
@@ -28,14 +30,15 @@ PV-module under
 environmental conditions is performed, instead a PV emulator based on
 the principles of the paper *Simple and Fast Dynamic Photovoltaic
 Emulator based on a Physical Equivalent PV-cell Model* by Khawaldeh et
-al. is used [@pvemulator]. The emulator is based on the single-diode
+al. is used. The emulator is based on the single-diode
 equivalent circuit of a PV-module, here a current source and a
 series connection of power diodes are connected together in the flux
 direction, and a series and a parallel resistor are also added, as shown
-in Figure [\[fig:pvemu1\]](#fig:pvemu1){reference-type="ref"
-reference="fig:pvemu1"}. The number of diodes, the maximum current of
+in [Basic PV emulator](#pvbasic). The number of diodes, the maximum current of
 the source and the resistor values can be varied to change the
 characteristic.
+
+###### Shaded PV emulator {#pvshaded}
 
 ![image](../assets/image/pv_emulator2.svg)
 
@@ -50,13 +53,14 @@ under partial shading, but for this the PV emulator must be wired
 slightly differently. The partial shading is emulated with an additional
 lower current source, which affects only a small part of the series
 connection from the diodes. Both current sources are wired according to
-figure [\[fig:pvemu2\]](#fig:pvemu2){reference-type="ref"
-reference="fig:pvemu2"}. Also, two bypass diodes must be added to allow
+[pv emulator shaded](#pvshaded). Also, two bypass diodes must be added to allow
 current to flow through the circuit even if some diodes become shaded.
 The same diodes are used for this as for the series connection. The PV
 emulator should now exhibit very similar behavior to a standard solar
 module that is one-third shaded, with an open circuit voltage
 $V_{oc}=21V$, the short circuit current of $I_{sc}=5A$, and two bypass
 diodes.
+
+###### PV emulator picture
 
 ![image](../assets/image/pvemulator.jpg)

@@ -54,7 +54,9 @@ The chip is available in different variants with different sensitivities $S$. Wh
             V_{out,max} - V_{out,0A} = V_{vs,min} - Swing_{vs} - 0.1 \cdot V_{vs,min} $$
 
 The design parameters for the calculated output range are shown in the
-table [2].
+[table](#tab:design).
+
+###### Design Parameters {#tab:design}
 
 | **Design parameter**         | **Value** |
 |------------------------------|-----------|
@@ -68,7 +70,7 @@ The parameters show a maximum positive linear voltage step of $2.58V$. In order 
 $$ \label{eq:ibmax}
 I_{B,max} = \frac{V_{out,max} - V_{out,0A}}{S} $$
 
-The choice falls on the TMCS1108A3U [@datasheet:TMCS1108] because it
+The choice falls on the [TMCS1108A3U](https://www.ti.com/lit/ds/symlink/tmcs1108.pdf?ts=1694006955334&ref_url=https%253A%252F%252Fwww.google.com%252F) because it
 covers a measuring range of ${0A \rightarrow +12.9A}$ at a supply
 voltage of ${V_{vcc}=3.2V}$ with a sensitivity of $S = 200mV/A$, which
 corresponds to the highest triggering for the range
@@ -77,10 +79,12 @@ ${0A \rightarrow +10A}$ of the solar module optimizer.\
 The output voltage of the chip $VOUT$ should be as free of noise as
 possible to reduce measurement errors. Therefore, a low-pass filter with
 a cutoff frequency of $f_{c}=75Hz$ is also used here as shown in chapter
-[5.3](#kap:tiefpass). The
-maximum voltage at the ADC is equal to the supply voltage
+[lowpassfilter](lowpassfilter).
+The maximum voltage at the ADC is equal to the supply voltage
 $V_{vs}=3.2V$ of the chip, so the whole range of the
-ADC is used.\
-Figure [\[fig:tmcs1108\]] shows how the chip is wired up, this involves routing the high current to be measured through two input pins and two output pins, any heat generated is dissipated through generous copper areas and vias. Another important element is the bypass capacitor $C_{bypass}=0.1\mu F$ of the chip's power supply, it compensates voltage fluctuations and decouples the chip from the rest of the components, without the bypass capacitor the measurement error of the current measurement would be significantly larger. Its placement should be as close as possible to the pin *VS* of the supply voltage. 
+ADC is used.
 
+[Figure](#fig:tmcs1108) shows how the chip is wired up, this involves routing the high current to be measured through two input pins and two output pins, any heat generated is dissipated through generous copper areas and vias. Another important element is the bypass capacitor $C_{bypass}=0.1\mu F$ of the chip's power supply, it compensates voltage fluctuations and decouples the chip from the rest of the components, without the bypass capacitor the measurement error of the current measurement would be significantly larger. Its placement should be as close as possible to the pin *VS* of the supply voltage. 
+
+###### Schematic TMCS1108 {#fig:tmcs1108}
 ![image](../assets/image/tmcs1108.svg)
