@@ -8,7 +8,7 @@ nav_order: 1
 
 ![Hardware](assets/image/hardware2.png)
 
-#### Open Source Project by Arne Schmidt
+#### Open Source Project by Arne Christian Schmidt
 
 [View it on Github](https://github.com/dulouie/mushroom_mppt){: .btn .btn-purple .mr-2 }
 [View Slides](https://dulouie.github.io/mushroom_mppt/){: .btn .btn-blue }
