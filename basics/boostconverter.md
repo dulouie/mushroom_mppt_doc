@@ -119,7 +119,8 @@ The input resistance from
 converter and the duty cycle. This insight is the basis for the
 operation of the solar module optimiser. The next section shows how the
 solar module can be operated at the optimal operating point by
-modulating the duty cycle [@IntelligentEnergy p.254][@UmanandPower p.207-213].
+modulating the duty cycle.
+<!--[@IntelligentEnergy p.254][@UmanandPower p.207-213] -->
 
 ###### Figure Input Resistance {#fig:boost_Rin}
 ![{#fig:boost_Rin}](../assets/image/boost_Rin.svg)

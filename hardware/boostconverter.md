@@ -56,4 +56,6 @@ C_{out} = \frac{I_{out}D_{max}}{\Delta V_{out} f_{s}} = \frac{2A \cdot 0,7}{0,1V
 The capacitance of the output capacitor should be greater than the
 calculated value and is thus chosen to be $C_{out} = 470 \mu F$. The
 voltage rating is chosen to be $V_{C_{outmax}}=68V$, as the maximum
-output voltage is $V_{out_{max}}=50V$ [@UmanandPower p.212].
+output voltage is $V_{out_{max}}=50V$.
+
+<!--[@UmanandPower p.212]-->

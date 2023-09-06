@@ -23,7 +23,7 @@ progression and search of the algorithms for the
 MPP, the operating
 points are shown together with the characteristic curves from the last [chapter](characteristics). The first experiment is performed with
 the PO-algorithm and
-a unshaded solar module, the red operating points are shown in [Figure](#perturb1). As expected, the algorithm scans up
+a unshaded solar module, the red operating points are shown in [figure](#perturb1). As expected, the algorithm scans up
 to the global MPP,
 and oscillates around this point in small steps.
 
@@ -40,7 +40,7 @@ search for the MPP
 can be implemented. However, in another experiment with a shaded solar
 module, a weakness of this algorithm becomes apparent.\
 \
-As seen in [Figure](#perturb2), the algorithm dwells in
+As seen in [figure](#perturb2), the algorithm dwells in
 the local MPP at
 $V_{pv}=23V$ and will never find the global MPP because its decision making is based on
 the slope of the PU-characteristic. The global MPP is at $U_{pv}=13V$ and is the much more

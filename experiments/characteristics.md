@@ -63,7 +63,7 @@ approx. $V_{pv}=14V$ the current breaks down from $I_{pv}=4A$ to
 $I_{pv}=2A$.
 
 While only one global MPP appears in the PV-characteristic in the experiment without
-shading from [Figure](#pvemu1), two MPP become visible here. These two
+shading from [figure](#pvemu1), two MPP become visible here. These two
 MPP are also called
 local MPP and are
 the challenge for the next chapter [compasion](comparison), where the two algorithms are tested and
