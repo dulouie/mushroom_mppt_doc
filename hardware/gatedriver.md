@@ -79,7 +79,7 @@ circuits this is an important element. Because higher currents flow very
 quickly here and the power supply is more heavily loaded as a
 result.
 
-[@IntelligentEnergy p.259] [@datasheet:SLUA618A].
+<!--[@IntelligentEnergy p.259] [@datasheet:SLUA618A].-->
 
 ###### Gate driver schematic {#fig:gatedriver}
 ![image](../assets/image/ir2104.svg)
