@@ -24,7 +24,8 @@ C_{filter} = \frac{1}{2\pi R_{filter} f_{c}} = \frac{1}{2\cdot\pi\cdot 10k\Omega
 
 The capacitor $C_{filter}$ is calculated according to
 \eqref{eq:lowpass} and assigned to a suitable value of the E24
-series with $C_{filter} = 220 nF$ [@scherzmonk p.665].
+series with $C_{filter} = 220 nF$.
+<!--[@scherzmonk p.665]-->
 
 ###### Lowpass filter {#fig:low-pass}
 ![image](../assets/image/tiefpass.svg)
